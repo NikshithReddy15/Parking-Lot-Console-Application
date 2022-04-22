@@ -8,7 +8,7 @@ namespace Parking_Lot.Models
     {
         public List<Slot> Slots;
         public List<Staff> Staff;
-        public List<Vehicle> Vehicles;
+        //public List<Vehicle> Vehicles;
         public List<TwoWheeler> TwoWheelers;
         public List<FourWheeler> FourWheelers;
         public List<HeavyVehicle> HeavyVehicles;
@@ -18,8 +18,11 @@ namespace Parking_Lot.Models
         {
             Staff = new List<Staff>();
             Slots = new List<Slot>();
-            Vehicles = new List<Vehicle>();
             Tickets = new List<Ticket>();
+            //Vehicles = new List<Vehicle>();
+            TwoWheelers = new List<TwoWheeler>();
+            FourWheelers = new List<FourWheeler>();
+            HeavyVehicles = new List<HeavyVehicle>();
         }
 
         public void GetSlots()

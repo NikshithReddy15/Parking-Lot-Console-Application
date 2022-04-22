@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Parking_Lot.Models
 {
-    internal class FourWheeler : ParkingLot
+    internal class FourWheeler : Vehicle
     {
         private string vehicleNumber;
         private int engineCapacity;
@@ -16,7 +16,7 @@ namespace Parking_Lot.Models
         private int maxWeight;
         private string steeringType;
 
-        public FourWheeler(string vehicleNumber, string vehicleType, string ownerName, int slotID, int engineCapacity, string engineType, int seatingCapacity, int fuelCapacity, int maxWeight)
+        public FourWheeler(string vehicleNumber, string vehicleType, string ownerName, int slotID, int engineCapacity, string engineType, int seatingCapacity, int fuelCapacity, int maxWeight) : base(vehicleNumber, vehicleType, ownerName, slotID)
         {
             VehicleNumber = vehicleNumber;
             EngineCapacity = engineCapacity;
@@ -25,7 +25,6 @@ namespace Parking_Lot.Models
             FuelCapacity = fuelCapacity;
             MaxWeight = maxWeight;
             SteeringType = "Wheel";
-            Vehicles.Add(new Vehicle(vehicleNumber, vehicleType, ownerName, slotID));
         }
 
         public string VehicleNumber { get { return vehicleNumber; } set { vehicleNumber = value; } }
